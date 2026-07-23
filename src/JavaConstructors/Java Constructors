@@ -1,0 +1,25 @@
+Java Constructors
+----------------
+
+Constructor is a special type of method used for initializing objects and is called automatically
+whenever we create an object of a class using the new keyword.
+
+Constructors can be overloaded but cannon be overridden. Because Constructors belong to their own class
+and have the same name as that of class name and are used to initialize objects. Then can't be inherited.
+
+A constructor cannot be declared as final. The purpose of the final keyword is to prevent method overriding.
+Constructors are never inherited or overridden because they belong only to their own class and have the same
+name as the class. Since constructors cannot be overridden, declaring them as final has no meaning, so Java
+does not allow it.
+
+Constructors can be overloaded, but while running the application compiler will only search for the
+method with valid signature String[] args, and it will call this method.
+
+Constructors are not inherited because, they are used to initialize objects of a specific class.
+Since they are tied to the class itself and have the same name as the class, they are not inherited by
+child classes. When a child object is created, it calls the parent constructor using super(),
+but it does not inherit the parent's constructor.
+
+Constructor Chaining in Java
+----------------------------
+
