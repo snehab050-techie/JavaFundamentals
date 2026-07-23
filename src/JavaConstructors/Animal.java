@@ -13,7 +13,7 @@ class Dog extends Animal{
         System.out.println("Child class constructor called");
     }
 
-    public static void main(String[] args) {
+     static void main(String[] args) {
 
         Dog dog =new Dog();
         //Whenever the child object is created
