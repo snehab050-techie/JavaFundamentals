@@ -5,4 +5,56 @@ Java Collection Framework provides a set of classes and interfaces that are used
 store and manipulate group of objects efficiently.
 
 It provides a ready made data structures like List, Set, Queue & Map
-which makes data storage , retrieval easier and manipulate objects efficiently
+making data storage , retrieval easier and more efficient.
+
+Map is NOT part of the Collection interface. It is a separate interface in the Java Collections Framework.
+
+------------------------------------------------------------------------------------------------------------------------
+Collection Hierarchy
+
+Iterable (I)
+^
+Collection(I)
+^
+List (I)                                                     Set (I)                       Queue (I)
+^                                                               ^                             ^
+ArrayList  LinkedList Stack Vector     HashSet LinkedHashSet  SortedSet       PriorityQueue   Deque     LinkedList(C)
+    (C)         (C)    (C)    (C)        (C)        (C)        (I) ^               (C)        (I)^
+                                                                TreeSet(C)                   ArrayDeque(C)
+
+Map(I)
+^
+HashMap(C)  HashTable(C) LinkedHashMap(C)  SortedMap(I)
+                                                ^
+                                              TreeMap(C)
+
+------------------------------------------------------------------------------------------------------------------------
+1) List
+
+A list stores elements in the order they are inserted.
+
+> List maintains insertion order
+> Allows duplicate elements
+> Allows null values
+> Allows accessing elements using index
+
+    a) ArrayList: Uses a dynamic array internally
+                  Fast for retrieving elements
+                  Slower for insertion and deletion in the middle
+
+                  Use ArrayList when:
+                  We frequently read data.
+                  Insertions/deletions are less frequent.
+
+                  Examples:
+                  E-Commerce Shopping Carts - Holds items as a user clicks "Add to Cart".
+                  Expands in size when more products are added and shrinks if an item is deleted
+
+                  Music and Video Playlists - Manages streaming queues on apps like Spotify or Netflix.
+                  Allows songs or movies to be inserted, deleted, or reordered dynamically.
+
+                  Task & ToDo Lists
+                  Keeps track of daily chores or work items where tasks are constantly checked off (removed) or added
+
+    b) LinkedList :
+
