@@ -41,6 +41,7 @@ A list stores elements in the order they are inserted.
     a) ArrayList: Uses a dynamic array internally
                   Fast for retrieving elements
                   Slower for insertion and deletion in the middle
+                  Uses less memory compared to Linked List
 
                   Use ArrayList when:
                   We frequently read data.
@@ -56,5 +57,30 @@ A list stores elements in the order they are inserted.
                   Task & To Do Lists
                   Keeps track of daily chores or work items where tasks are constantly checked off (removed) or added
 
-    b) LinkedList :
+    b) LinkedList : Uses Doubly Linked List internally
+                    Faster for insertion/deletion operations
+                    Slower for read operations or random access
+                    Uses more memory as it has to store both references (previous & next element)
+
+                    Use Linked List when frequent insertion or deletion operations are required
+
+                    Example: In the real world, linked lists are used when you need to dynamically
+                    add or remove items without resizing a fixed container. Java provides a built-in
+                    implementation via the java.util.LinkedList class, which operates as a doubly linked list.
+
+                    Music Player PlayList
+                    GPS Navigation Routes
+                    Undo/Redo Layers
+
+    c) Stack: Follows LIFO - Last In First Out
+
+              The last element to be added in the stack is the first one ro be removed from the stack
+              Main operations - push(), pop(), peak()
+
+              push() - to add an element in to the stack
+              pop()  - to remove an element from the stack
+              peak() - returns the next element that will be removed from the stack
+
+    d) Vector: Legacy data structure
+
 

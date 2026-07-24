@@ -1,6 +1,7 @@
 package JavaCollections.List;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -58,8 +59,10 @@ public class ShoppingCart {
         shoppingCart.add("Cloth");
         shoppingCart.add("Shells");
 
+        //Other way to create an arrayList object
+        ArrayList<Integer> a2 = new ArrayList<>(Arrays.asList(89,23,78,29,56));
+        a2.forEach(System.out::println);
+
         ShoppingCart.viewMyCart(shoppingCart);
-
-
     }
 }
