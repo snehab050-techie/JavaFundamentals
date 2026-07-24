@@ -4,6 +4,8 @@ Java Constructors
 Constructor is a special type of method used for initializing objects and is called automatically
 whenever we create an object of a class using the new keyword.
 
+If developer creates a constructor within the class, then Java won't provide default constructor. We have t declare one.
+
 Constructors can be overloaded but cannon be overridden. Because Constructors belong to their own class
 and have the same name as that of class name and are used to initialize objects. Then can't be inherited.
 
@@ -23,3 +25,12 @@ but it does not inherit the parent's constructor.
 Constructor Chaining in Java
 ----------------------------
 
+Constructor chaining is the process of calling one constructor from another constructor to reuse code and
+avoid duplication. It can be done using this() within the same class or super() to call a parent class
+constructor.
+
+this() is used to call another constructor of the same class.
+It must be the first statement inside the constructor.
+
+super() is used to call the constructor of the parent class.
+If we don't write it explicitly, Java inserts it automatically.

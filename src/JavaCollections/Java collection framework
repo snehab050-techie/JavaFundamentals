@@ -1,0 +1,8 @@
+Java Collection Framework
+-------------------------
+
+Java Collection Framework provides a set of classes and interfaces that are used to
+store and manipulate group of objects efficiently.
+
+It provides a ready made data structures like List, Set, Queue & Map
+which makes data storage , retrieval easier and manipulate objects efficiently

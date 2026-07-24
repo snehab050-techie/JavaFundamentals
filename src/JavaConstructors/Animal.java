@@ -3,6 +3,7 @@ package JavaConstructors;
 public class Animal {
 
     Animal(){
+
         System.out.println("Parent class constructor called");
     }
 }
