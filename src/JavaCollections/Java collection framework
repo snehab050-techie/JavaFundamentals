@@ -53,7 +53,7 @@ A list stores elements in the order they are inserted.
                   Music and Video Playlists - Manages streaming queues on apps like Spotify or Netflix.
                   Allows songs or movies to be inserted, deleted, or reordered dynamically.
 
-                  Task & ToDo Lists
+                  Task & To Do Lists
                   Keeps track of daily chores or work items where tasks are constantly checked off (removed) or added
 
     b) LinkedList :

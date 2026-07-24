@@ -1,3 +1,12 @@
 Ways to print List Objects
 ------------------------------
 
+There are 6 ways to loop through an ArrayList
+
+1) Enhanced for loop
+2) Traditional for loop
+3) forEach() method
+4) Iterator()
+5) ListIterator
+6) Streams (Java V 8)
+7) Method referencing
