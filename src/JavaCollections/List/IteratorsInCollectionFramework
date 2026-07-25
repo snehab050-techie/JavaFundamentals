@@ -16,5 +16,26 @@ Methods:
 
 Example: To remove inactive users from collection of users
 
+-----------------
+
+Iterator is an interface in Java used to traverse elements of a collection one by one.
+It provides a common way to iterate through collections such as List, Set, and Queue without
+depending on their internal implementation.
+
+Iterator is used to traverse collections in a uniform way. It is especially useful for
+collections like HashSet that do not support indexing. It also allows elements to be removed
+safely while iterating.
+
+Difference between a for loop and an Iterator
+----------------------------------------------
+
+            For Loop	                                     Iterator
+Best for arrays and indexed collections	            Works with all collection types
+
+Uses indexes	                                    Uses hasNext() and next()
+
+Removing elements while iterating may               Supports safe removal using remove()
+cause ConcurrentModificationException
+
 
 

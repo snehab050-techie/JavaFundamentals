@@ -1,9 +1,6 @@
 package JavaCollections.List;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class DemoIterator {
 
@@ -49,5 +46,41 @@ public class DemoIterator {
             }
         }
         System.out.println("Lst after removing odd numbers: "+numList);
+
+        //Store employee names and print only the names starting with S
+        Set<String> empNames = new HashSet<>();
+
+        empNames.add("Sneha");
+        empNames.add("Janu");
+        empNames.add("Suhas");
+        empNames.add("Basu");
+
+         Iterator<String> set =empNames.iterator();
+         while(set.hasNext()){
+             String s = set.next();
+             if(s.startsWith("S") || s.startsWith("s")){
+                 System.out.println(s);
+             }
+         }
+
+         //Store fruit names and remove Apple using an Iterator
+        List<String> fruitsList = new ArrayList<>(Arrays.asList("WaterMelon","Apple","JackFruit"));
+         java.util.Iterator<String> fList = fruitsList.iterator();
+
+         // throws conCurrentModificationException - changes to collection while iteration is not possible
+        /*for(String s: fruitsList){
+            if(s.equals("Apple")){
+                fruitsList.remove("Apple");
+            }
+        }
+*/
+         while(fList.hasNext()){
+             String s = fList.next();
+             if(s.equals("Apple")){
+                 fruitsList.remove("Apple");
+             }
+             System.out.println(fruitsList);
+         }
+
     }
 }
