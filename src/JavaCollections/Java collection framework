@@ -155,6 +155,8 @@ Use when we want to store unique data like email, password
                        Thread-safe
 
 
+----------------------------------------
 
+While looping we cannot modify the collection - throws concurrentModificationException
 
 

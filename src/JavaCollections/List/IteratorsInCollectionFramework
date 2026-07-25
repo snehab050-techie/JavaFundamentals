@@ -1,0 +1,20 @@
+Iterator
+---------
+
+Iterator is an object used to traverse (visit) elements one by one from a collection.
+
+Some collections - HashSet, TreeSet, Queue don't support indexing.
+Iterator works with ALL collections. That's why Iterator is preferred than for loops
+
+If we use for loop for modifying collection while looping it throws ConcurrentModificationException.
+Whereas Iterator removes elements safely while modifying the collection while iteration.
+
+Methods:
+    hasNext() - Checks if another element exists
+    next() - returns the next element
+    remove() - removes the current element safely
+
+Example: To remove inactive users from collection of users
+
+
+

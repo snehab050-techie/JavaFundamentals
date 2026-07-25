@@ -1,6 +1,7 @@
 package JavaCollections.Map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -25,5 +26,10 @@ public class ProductInfo {
         product.remove(1);
 
         System.out.println(product);
+
+        Iterator<String> it = product.values().iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
     }
 }
