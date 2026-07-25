@@ -4,6 +4,9 @@ Java Collection Framework
 Java Collection Framework provides a set of classes and interfaces that are used to
 store and manipulate group of objects efficiently.
 
+Unlike arrays where we will have fixed sixe of an array, collections expand and shrink their size according to
+the requirement. Thus helping in storage, manage and manipulating data.
+
 It provides a ready made data structures like List, Set, Queue & Map
 making data storage , retrieval easier and more efficient.
 
@@ -82,5 +85,76 @@ A list stores elements in the order they are inserted.
               peak() - returns the next element that will be removed from the stack
 
     d) Vector: Legacy data structure
+
+2) Set
+
+Stores unique elements
+Does not maintain insertion order
+No indexing
+No duplicates
+
+Use when we want to store unique data like email, password
+
+    a) HashSet: Stores unique elements
+                Order is not maintained
+                Allows only one null value
+                Faster for searching
+
+                Use HashSet when uniqueness is important
+
+                Example: E-Commerce (Unique Items in Cart Promo): Applying a "buy 3 unique items" discount code
+                         by filtering a shopping cart list for unique Product IDs
+
+    b) LinkedHashSet: Maintains insertion order
+
+    c) TreeSet: Stores elements in sorted order
+                Does not allow null values
+                - if we add null, it will not throw any error at compile time, but will throw NPE at runtime
+
+                Example: School Management (Student Merit Lists): Generating a real-time leaderboard or honor
+                         roll from student IDs sorted automatically by grade rank.
+
+3) Queue: Follows FIFO - First In First Out
+
+    The first element to be added into queue will be the first one to be removed from the queue
+    Elements are added at rear end (tail) and are removed from the front end (head)
+
+    Common implementation:
+    Queue<Integer> queue = new LinkedList<>();
+
+    Example: Train ticket queue
+
+    a) Priority Queue: Each element will be associated with a priority,
+                       highest priority element will be served first
+
+                       Example: Prime Minister in middle of ticket queue
+    b) LinkedList
+
+        Example: A physical line at a theater counter is a perfect example. The customer who arrives
+                 first gets the ticket first. New arrivals must join the end of the line.
+
+    c) Deque - ArrayDeque: Internally uses dynamic array to store data
+
+4) Map: Map stores data in key-value pair
+
+        Each key is unique. Values can be duplicated
+
+        a) HashMap - Stores key-value pairs
+                     Keys are unique
+                     Values can be duplicate
+                     Allows one null key
+                     Allows multiple null values
+                     No ordering
+
+        b) LinkedHashMap - Maintains Insertion order
+
+        c) TreeMap - Stores keys in sorted order
+                     Null keys are not allowed
+
+        d) HashTable - No Null Keys or values are allowed
+                       Thread-safe
+
+
+
 
 
