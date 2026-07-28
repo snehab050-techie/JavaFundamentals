@@ -146,7 +146,7 @@ public class Employee {
 
 class Execution{
 
-    static void main() {
+    static void main(String[] args) {
 
         Employee emp = new Employee();
         emp.createEmployees();

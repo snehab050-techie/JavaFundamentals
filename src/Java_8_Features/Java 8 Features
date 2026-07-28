@@ -1,0 +1,31 @@
+Important Java 8 features
+-------------------------------
+
+Lambda Expressions, Functional Interfaces, static and default methods in Interfaces, Stream API, Date API,
+Optional Class, Method references
+
+Lambda Expressions
+----------------
+
+LE are the speacial type of functions without any name, access modifier & with no return type written using lambda symbol
+->  used to reduce boiler plate code in Java and make code more readable and maintainable
+
+These can be used to provide implementation for Functional Interfaces.
+
+Example: (a,b) -> System.out.println(a+b);
+
+Functional Interfaces
+-----------------------
+
+The interface with only one abstract method and they can have many static and default methods
+
+Example for Built in FI - Comparator (with only one abs method - compare()) & Runnable (with only one abs method - run())
+
+We use @FunctionalInterface annotation to denote that the interface is a FI to avoid any compile time checking and restrict
+the interface to have only one abstract method.
+
+We can have our own functional interface - User defined - However the rule is to have only one abstract method and they
+can have many static and default methods
+
+The instances of functional interfaces can be created with lambda expressions, method references, or constructor references.
+
