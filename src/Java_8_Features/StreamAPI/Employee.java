@@ -28,10 +28,14 @@ public class Employee {
                 .filter(n -> n%2 == 0)
                 .forEach(System.out::println);
 
+        //map()
         //add prefix 'EMP' to emp Ids
         List<Integer> empIds = Arrays.asList(101,102,103,104);
         empIds.stream()
                 .map(id -> "EMP-" + id)
                 .forEach(System.out::println);
+
+        //Intermediate operations - filter(), map(), sorted(), distinct(), limit(), skip()
+        // Terminal operations - toList(), forEach(), collect(), reduce(), count(), findFirst()
     }
 }
