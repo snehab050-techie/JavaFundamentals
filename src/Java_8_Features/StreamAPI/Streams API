@@ -1,0 +1,9 @@
+
+A Stream is a sequence of elements used to process data from collections in a declarative manner.
+It allows operations such as filtering, mapping, sorting, and collecting without modifying the original collection.
+
+Streams were introduced in Java 8 to simplify collection processing.
+Before Streams, developers had to write multiple loops and temporary collections, making the code lengthy and harder to maintain.
+Streams provide cleaner, more readable code and also support parallel processing.
+
+Streams do not modify the original collection. They process the data and produce a new result.
