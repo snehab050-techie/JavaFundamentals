@@ -1,0 +1,9 @@
+Optional class from Java 8 help developers avoid getting Null Pointer Exceptions
+
+Optional.of()
+Optional.empty()
+Optional.ofNullable()
+
+orElse() - Helps us to provide a default value when the Optional is empty
+orElseThrow() - Use this when value is mandatory. If the optional is empty it throws a Custom exception, which helps
+                identify missing data early and avoids unexpected behaviour later in the application.
