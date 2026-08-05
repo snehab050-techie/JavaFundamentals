@@ -43,6 +43,7 @@ public class DemoOptional {
         System.out.println(value);
 
         //orElseThrow()
+
         String empEmail = null;
         Optional<String> emailOpt =Optional.ofNullable(empEmail);
 
