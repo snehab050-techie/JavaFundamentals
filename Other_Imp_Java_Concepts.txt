@@ -94,6 +94,67 @@ The magic word: WEAK ownership
 
 The Department contains/references Employees, but it doesn't completely own their lifecycle.
 
+3. Composition - "Has-a, and strongly owns it"
+------------------------------------------------
 
+House -> Rooms
+
+A house contains rooms.
+
+class Room {
+}
+
+class House {
+
+    private Room room = new Room();
+
+}
+
+Here the relationship is much stronger.
+
+The Room is considered a part of that particular House.
+
+If the house is destroyed, its rooms don't meaningfully exist as independent rooms of that house.
+
+That's composition.
+
+Magic word:
+
+STRONG ownership
+
+The lifecycle of the child object is tied to the parent.
+
+-----------------------------------------
+
+Objects should collaborate with each other instead of putting everything inside one huge class.
+
+For example, instead of:
+
+class Employee {
+
+    String name;
+    String departmentName;
+    String managerName;
+    String managerEmail;
+    String companyName;
+}
+
+We can model actual objects:
+
+class Employee {
+    String name;
+    Department department;
+    Manager manager;
+}
+
+Aggregation and composition are special forms of association.
+
+Association = general relationship
+
+Aggregation = association with weak ownership
+
+Composition = association with strong ownership
+
+Aggregation means the child object is always created outside and composition means it is always created inside.
 
 
