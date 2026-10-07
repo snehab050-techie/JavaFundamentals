@@ -1,0 +1,99 @@
+Association, Aggregation & composition
+---------------------------------------
+
+All three describe relationships between objects/classes.
+
+They describe - "How are these two objects related to each other?"
+
+For example:
+
+A Student knows/uses a Teacher
+A Department has Employees
+A House has Rooms
+
+These relationships can have different strengths.
+
+Association -> general relationship
+Aggregation -> weak “has-a” relationship
+Composition -> strong “has-a” relationship
+
+1. Association — "Objects are related"
+-------------------------------------------
+
+Association is a general relationship between two independent objects where one object can interact with or use another object.
+
+Example:
+
+A Student is associated with a Teacher.
+
+A student learns from a teacher.
+
+class Teacher {
+    String name;
+}
+
+class Student {
+    String name;
+    Teacher teacher;
+}
+
+The Student has a reference to a Teacher.
+
+But notice something important:
+
+The Teacher doesn't belong to the Student.
+
+The teacher can exist independently.
+
+If the student object is deleted, the teacher doesn't disappear.
+
+Association = one object is related to another object.
+
+2. Aggregation - "Has-a, but both can live independently"
+-------------------------------------------------------------
+
+Aggregation is a weak has-a relationship where the objects can exist independently.
+
+Imagine:
+
+Department → Employees
+
+A department has employees.
+
+class Employee {
+    String name;
+}
+
+class Department {
+
+    List<Employee> employees;
+
+}
+
+We can say:
+
+Department has Employees.
+
+This is a has-a relationship.
+
+But here's the important part:
+
+Employee can exist without the Department.
+
+Now the department is deleted.
+
+Does the employee die?
+
+No.
+
+The employee can move to another department.
+
+That's aggregation.
+
+The magic word: WEAK ownership
+
+The Department contains/references Employees, but it doesn't completely own their lifecycle.
+
+
+
+
