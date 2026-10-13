@@ -157,4 +157,121 @@ Composition = association with strong ownership
 
 Aggregation means the child object is always created outside and composition means it is always created inside.
 
+--------------------------------
 
+Shallow Copy Vs. Deep Copy in Java
+
+
+1) Shallow copy - refers to cpopying the reference of an object, not the actual object.
+
+		  Changes made to one reference will affect another.
+
+		  No new memory is allocated. Both references point ot the same memory location.
+
+Example:
+
+class Address{
+
+	String city;
+
+	public Address(String city){
+		this.city = city;
+	}
+}
+
+class Employee implements Cloneabale{
+
+	String eName;
+	Address address;
+
+	public Employee(String name, Address address){
+		this.eName = name;
+		this.address = address;
+	}
+
+	@Override
+	public Employee clone() thorws CloneNotSupportedException{
+		return (Employee)super.clone();
+	}
+
+}
+
+public class Main{
+	public static void main(String[] args){
+
+		Address a = new Address("Bengaluru");
+		Employee e1 = new Employee("Sneha",a);
+
+		Employee e2 = e1.clone();   //Shallow Copy
+		
+		e2.address.city = "Mysuru";
+		
+		System.out.println(e1.address.city);
+		System.out.println(e2.address.city);
+
+	}
+
+}
+
+Output:
+
+Mysuru
+Mysuru
+
+So changing one reference will affect another. Thats shallow copy.
+
+2) Deep copy - creates a new object by copying the object feilds.
+	       Both object reference point to different memeroy locations.
+	       Changing one reference value will not affect another.
+
+Example:
+
+
+class Address {
+    String city;
+
+    Address(String city) {
+        this.city = city;
+    }
+}
+
+class Employee {
+    String name;
+    Address address;
+
+    Employee(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    // Deep copy constructor
+    Employee(Employee other) {
+        this.name = other.name;
+        this.address = new Address(other.address.city);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Address a = new Address("Bengaluru");
+        Employee e1 = new Employee("Rahul", a);
+
+        // Deep copy
+        Employee e2 = new Employee(e1);
+
+        e2.address.city = "Mysuru";
+
+        System.out.println(e1.address.city);
+        System.out.println(e2.address.city);
+    }
+}
+
+Output:
+
+Bengaluru
+Mysuru
+
+
+In Java, shallow copying can be implemented using Object.clone(), while deep copying can be implemented using a copy constructor 
+that creates new nested objects.
