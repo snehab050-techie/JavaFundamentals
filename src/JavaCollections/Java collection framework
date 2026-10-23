@@ -159,4 +159,34 @@ Use when we want to store unique data like email, password
 
 While looping we cannot modify the collection - throws concurrentModificationException
 
+-----------Interview Questions on Collections Framewrok
 
+1. Difference between HashMap and HashSet
+
+Feature          	            HashMap	                                   HashSet
+
+Data storage	        -      Key-value pairs	                         Unique elements
+Interface	            -             Map	                                  Set
+Duplicate keys/elements	-      Keys are unique	                        Elements are unique
+Duplicate values	    -           Allowed	                                Not applicable
+Null support	        -    One null key, multiple null values	           One null element
+Insertion order	        -        Not guaranteed	                         Not guaranteed
+Common methods	        -     put(), get(), remove()	               add(), contains(), remove()
+Thread-safe?	        -            No	                                        No
+
+2. How does HashSet work internally?
+
+A HashSet internally uses a HashMap!
+When we write:
+Set<String> set = new HashSet<>();
+
+set.add("Java");
+set.add("Spring");
+set.add("Java");
+
+Internally, HashSet stores its elements as keys in a HashMap.
+The actual implementation uses a constant dummy object as the value for every element.
+
+When you add "Java" again, HashMap recognizes that the key already exists.
+Therefore, the duplicate is not added.
+This is how HashSet achieves uniqueness.
