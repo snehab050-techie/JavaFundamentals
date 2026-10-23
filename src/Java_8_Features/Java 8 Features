@@ -29,3 +29,89 @@ can have many static and default methods
 
 The instances of functional interfaces can be created with lambda expressions, method references, or constructor references.
 
+-----------------------------
+
+1. What are Java Streams?
+
+Java Streams were introduced in Java 8 to process collections of data in a simple and efficient way.
+
+They allow us to perform operations like filtering, mapping, sorting, and collecting data using a functional programming approach.
+
+Streams do not store data. They process data from a source such as a List or Set.
+
+They make code more readable and support both sequential and parallel processing.
+
+2. Why do we need Streams?
+
+Suppose we have a list of numbers:
+List<Integer> numbers = List.of(10, 15, 20, 25, 30);
+
+We want to find numbers greater than 20.
+
+Without Streams
+for (Integer n : numbers) {
+    if (n > 20) {
+        System.out.println(n);
+    }
+}
+
+With Streams
+numbers.stream()
+       .filter(n -> n > 20)
+       .forEach(System.out::println);
+
+
+Output:
+25
+30
+
+Streams make the code shorter and easier to read!
+
+3. How do Java Streams work?
+
+A Stream generally works in 3 steps:
+1. Source
+List, Set, etc.
+
+2. Intermediate Operations
+filter(), map(), sorted()
+
+3. Terminal Operation
+collect(), forEach(), count()
+
+Example:
+numbers.stream()
+       .filter(n -> n > 20)
+       .collect(Collectors.toList());
+
+- stream() → Creates a Stream from the collection.
+- filter() → Selects elements based on a condition.
+- collect() → Collects the result into a List.
+
+Important interview point: Streams are lazy. Intermediate operations like filter() do not execute until a terminal operation is called.
+
+4. Important Stream operations to remember
+Operation	Purpose
+filter() -	Select elements based on a condition
+map()	- Transform elements
+sorted() -	Sort elements
+distinct() -	Remove duplicates
+count() -	Count elements
+collect() -	Collect results
+forEach() -	Perform an action on each element
+reduce() - Combine elements into one result
+
+5. Quick interview questions
+
+Q1. Do Streams modify the original collection?
+No. Stream operations generally produce results without modifying the original collection. However, side effects inside operations can modify external state.
+
+Q2. Can we reuse a Stream?
+No. Once a terminal operation is performed, the Stream is consumed and cannot be reused.
+
+Q3. What is the difference between intermediate and terminal operations?
+- Intermediate operations return another Stream. Example: filter(), map().
+- Terminal operations produce a result or side effect. Example: collect(), count().
+
+Q4. What is lazy evaluation?
+Intermediate operations execute only when a terminal operation is called.
