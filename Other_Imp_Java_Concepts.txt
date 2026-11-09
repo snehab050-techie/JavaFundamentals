@@ -272,6 +272,5 @@ Output:
 Bengaluru
 Mysuru
 
-
 In Java, shallow copying can be implemented using Object.clone(), while deep copying can be implemented using a copy constructor 
 that creates new nested objects.
