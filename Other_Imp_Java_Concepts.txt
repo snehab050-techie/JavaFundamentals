@@ -13,7 +13,9 @@ A House has Rooms
 
 These relationships can have different strengths.
 
-
+Association -> general relationship
+Aggregation -> weak “has-a” relationship
+Composition -> strong “has-a” relationship
 
 1. Association — "Objects are related"
 -------------------------------------------
